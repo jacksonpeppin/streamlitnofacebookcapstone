@@ -20,7 +20,7 @@ with model_prediction:
     if img_url:
         try:
             prepared_image = img_classification.url_to_image(img_url)
-        except ValueError:
+        except:
             st.write('Please enter a valid URL for an image.')
         classify = st.button("Detect if the Image Contains a Human")
         if classify:
